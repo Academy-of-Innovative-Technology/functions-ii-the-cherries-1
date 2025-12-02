@@ -11,7 +11,6 @@
   <div class="container py-5">
     <h1 class="text-center mb-5">📘 JavaScript Function Review: Math Project</h1>
 
-    <!-- Basic Operations -->
     <div class="card mb-5">
       <div class="card-body">
         <h2 class="card-title">🔢 Basic Operations</h2>
@@ -24,160 +23,141 @@
           </div>
         </div>
         <div class="row g-2 mb-3">
-          <div class="col"><button class="btn btn-primary w-100">Add (+)</button></div>
-          <div class="col"><button class="btn btn-secondary w-100">Subtract (-)</button></div>
-          <div class="col"><button class="btn btn-success w-100">Multiply (*)</button></div>
-          <div class="col"><button class="btn btn-warning w-100">Divide (/)</button></div>
-          <div class="col"><button class="btn btn-danger w-100">Modulus (%)</button></div>
+          <div class="col"><button id="addBtn" class="btn btn-primary w-100">Add (+)</button></div>
+          <div class="col"><button id="subtractBtn" class="btn btn-secondary w-100">Subtract (-)</button></div>
+          <div class="col"><button id="multiplyBtn" class="btn btn-success w-100">Multiply (*)</button></div>
+          <div class="col"><button id="divideBtn" class="btn btn-warning w-100">Divide (/)</button></div>
+          <div class="col"><button id="modulusBtn" class="btn btn-danger w-100">Modulus (%)</button></div>
         </div>
         <div class="alert alert-info" id="basicResult">Result will appear here</div>
       </div>
     </div>
 
-    <!-- Math Formulas -->
     <div class="card">
       <div class="card-body">
         <h2 class="card-title mb-4">📐 Math Formulas</h2>
 
-        <!-- Reusable HTML blocks -->
-        <!-- Area of Rectangle -->
-        <h5>1. Area of Rectangle (L × W)</h5>
+        <h5>1. Area of Rectangle</h5>
         <div class="row mb-3">
           <div class="col"><input id="rectLength" type="number" class="form-control" placeholder="Length"></div>
           <div class="col"><input id="rectWidth" type="number" class="form-control" placeholder="Width"></div>
         </div>
-        <button class="btn btn-outline-primary mb-2">Calculate Area</button>
+        <button id="rectBtn" class="btn btn-outline-primary mb-2">Calculate Area</button>
         <div class="alert alert-light" id="rectResult"></div>
 
-        <!-- Circle Area -->
-        <h5 class="mt-4">2. Area of Circle (π × r²)</h5>
+        <h5>2. Area of Circle</h5>
         <input id="circleRadius" type="number" class="form-control mb-2" placeholder="Radius">
-        <button class="btn btn-outline-primary mb-2">Calculate Area</button>
+        <button id="circleBtn" class="btn btn-outline-primary mb-2">Calculate Area</button>
         <div class="alert alert-light" id="circleResult"></div>
 
-        <!-- Pythagorean Theorem -->
-        <h5 class="mt-4">3. Pythagorean Theorem (√(a² + b²))</h5>
+        <h5>3. Pythagorean Theorem</h5>
         <div class="row mb-3">
           <div class="col"><input id="sideA" type="number" class="form-control" placeholder="Side A"></div>
           <div class="col"><input id="sideB" type="number" class="form-control" placeholder="Side B"></div>
         </div>
-        <button class="btn btn-outline-primary mb-2">Calculate Hypotenuse</button>
+        <button id="pythagoreanBtn" class="btn btn-outline-primary mb-2">Calculate Hypotenuse</button>
         <div class="alert alert-light" id="pythagoreanResult"></div>
 
-        <!-- Simple Interest -->
-        <h5 class="mt-4">4. Simple Interest (P × R × T / 100)</h5>
+        <h5>4. Simple Interest</h5>
         <div class="row mb-3">
           <div class="col"><input id="principal" type="number" class="form-control" placeholder="Principal"></div>
           <div class="col"><input id="rate" type="number" class="form-control" placeholder="Rate %"></div>
           <div class="col"><input id="time" type="number" class="form-control" placeholder="Time (yrs)"></div>
         </div>
-        <button class="btn btn-outline-primary mb-2">Calculate Interest</button>
+        <button id="interestBtn" class="btn btn-outline-primary mb-2">Calculate Interest</button>
         <div class="alert alert-light" id="interestResult"></div>
 
-        <!-- Power -->
-        <h5 class="mt-4">5. Power (base ^ exponent)</h5>
+        <h5>5. Power</h5>
         <div class="row mb-3">
           <div class="col"><input id="base" type="number" class="form-control" placeholder="Base"></div>
           <div class="col"><input id="exponent" type="number" class="form-control" placeholder="Exponent"></div>
         </div>
-        <button class="btn btn-outline-primary mb-2">Calculate Power</button>
+        <button id="powerBtn" class="btn btn-outline-primary mb-2">Calculate Power</button>
         <div class="alert alert-light" id="powerResult"></div>
 
-        <!-- More Formulas -->
-        <hr class="my-4">
+        <hr>
 
-        <!-- Perimeter -->
-        <h5>6. Perimeter of Rectangle (2 × (L + W))</h5>
+        <h5>6. Perimeter of Rectangle</h5>
         <div class="row mb-3">
           <div class="col"><input id="periLength" type="number" class="form-control" placeholder="Length"></div>
           <div class="col"><input id="periWidth" type="number" class="form-control" placeholder="Width"></div>
         </div>
-        <button class="btn btn-outline-primary mb-2">Calculate Perimeter</button>
+        <button id="perimeterBtn" class="btn btn-outline-primary mb-2">Calculate Perimeter</button>
         <div class="alert alert-light" id="perimeterResult"></div>
 
-        <!-- Circumference -->
-        <h5 class="mt-4">7. Circumference of Circle (2πr)</h5>
+        <h5>7. Circumference of Circle</h5>
         <input id="circRadius" type="number" class="form-control mb-2" placeholder="Radius">
-        <button class="btn btn-outline-primary mb-2">Calculate Circumference</button>
+        <button id="circumferenceBtn" class="btn btn-outline-primary mb-2">Calculate Circumference</button>
         <div class="alert alert-light" id="circumferenceResult"></div>
 
-        <!-- Triangle Area -->
-        <h5 class="mt-4">8. Area of Triangle (½ × base × height)</h5>
+        <h5>8. Area of Triangle</h5>
         <div class="row mb-3">
           <div class="col"><input id="triangleBase" type="number" class="form-control" placeholder="Base"></div>
           <div class="col"><input id="triangleHeight" type="number" class="form-control" placeholder="Height"></div>
         </div>
-        <button class="btn btn-outline-primary mb-2">Calculate Area</button>
+        <button id="triangleBtn" class="btn btn-outline-primary mb-2">Calculate Area</button>
         <div class="alert alert-light" id="triangleAreaResult"></div>
 
-        <!-- Volume of Cube -->
-        <h5 class="mt-4">9. Volume of Cube (side³)</h5>
+        <h5>9. Volume of Cube</h5>
         <input id="cubeSide" type="number" class="form-control mb-2" placeholder="Side">
-        <button class="btn btn-outline-primary mb-2">Calculate Volume</button>
+        <button id="cubeBtn" class="btn btn-outline-primary mb-2">Calculate Volume</button>
         <div class="alert alert-light" id="cubeVolumeResult"></div>
 
-        <!-- Volume of Rectangular Prism -->
-        <h5 class="mt-4">10. Volume of Prism (L × W × H)</h5>
+        <h5>10. Volume of Prism</h5>
         <div class="row mb-3">
           <div class="col"><input id="prismLength" type="number" class="form-control" placeholder="Length"></div>
           <div class="col"><input id="prismWidth" type="number" class="form-control" placeholder="Width"></div>
           <div class="col"><input id="prismHeight" type="number" class="form-control" placeholder="Height"></div>
         </div>
-        <button class="btn btn-outline-primary mb-2">Calculate Volume</button>
+        <button id="prismBtn" class="btn btn-outline-primary mb-2">Calculate Volume</button>
         <div class="alert alert-light" id="prismVolumeResult"></div>
 
-        <!-- Volume of Cylinder -->
-        <h5 class="mt-4">11. Volume of Cylinder (πr²h)</h5>
+        <h5>11. Volume of Cylinder</h5>
         <div class="row mb-3">
           <div class="col"><input id="cylRadius" type="number" class="form-control" placeholder="Radius"></div>
           <div class="col"><input id="cylHeight" type="number" class="form-control" placeholder="Height"></div>
         </div>
-        <button class="btn btn-outline-primary mb-2">Calculate Volume</button>
+        <button id="cylinderBtn" class="btn btn-outline-primary mb-2">Calculate Volume</button>
         <div class="alert alert-light" id="cylinderVolumeResult"></div>
 
-        <!-- Speed -->
-        <h5 class="mt-4">12. Speed = Distance ÷ Time</h5>
+        <h5>12. Speed</h5>
         <div class="row mb-3">
           <div class="col"><input id="distance" type="number" class="form-control" placeholder="Distance"></div>
           <div class="col"><input id="time" type="number" class="form-control" placeholder="Time"></div>
         </div>
-        <button class="btn btn-outline-primary mb-2">Calculate Speed</button>
+        <button id="speedBtn" class="btn btn-outline-primary mb-2">Calculate Speed</button>
         <div class="alert alert-light" id="speedResult"></div>
 
-        <!-- Density -->
-        <h5 class="mt-4">13. Density = Mass ÷ Volume</h5>
+        <h5>13. Density</h5>
         <div class="row mb-3">
           <div class="col"><input id="mass" type="number" class="form-control" placeholder="Mass"></div>
           <div class="col"><input id="volume" type="number" class="form-control" placeholder="Volume"></div>
         </div>
-        <button class="btn btn-outline-primary mb-2">Calculate Density</button>
+        <button id="densityBtn" class="btn btn-outline-primary mb-2">Calculate Density</button>
         <div class="alert alert-light" id="densityResult"></div>
 
-        <!-- BMI -->
-        <h5 class="mt-4">14. BMI = Weight ÷ Height²</h5>
+        <h5>14. BMI</h5>
         <div class="row mb-3">
           <div class="col"><input id="weight" type="number" class="form-control" placeholder="Weight (kg)"></div>
           <div class="col"><input id="height" type="number" class="form-control" placeholder="Height (m)"></div>
         </div>
-        <button class="btn btn-outline-primary mb-2">Calculate BMI</button>
+        <button id="bmiBtn" class="btn btn-outline-primary mb-2">Calculate BMI</button>
         <div class="alert alert-light" id="bmiResult"></div>
 
-        <!-- Quadratic Discriminant -->
-        <h5 class="mt-4">15. Discriminant (b² - 4ac)</h5>
+        <h5>15. Quadratic Discriminant</h5>
         <div class="row mb-3">
           <div class="col"><input id="a" type="number" class="form-control" placeholder="a"></div>
           <div class="col"><input id="b" type="number" class="form-control" placeholder="b"></div>
           <div class="col"><input id="c" type="number" class="form-control" placeholder="c"></div>
         </div>
-        <button class="btn btn-outline-primary mb-2">Calculate Discriminant</button>
+        <button id="discriminantBtn" class="btn btn-outline-primary mb-2">Calculate Discriminant</button>
         <div class="alert alert-light" id="discriminantResult"></div>
 
       </div>
     </div>
   </div>
 
-  <!-- Bootstrap JS Bundle (Optional but useful for future additions) -->
   <script src="js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
