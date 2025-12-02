@@ -88,3 +88,4 @@ document.addEventListener("DOMContentLoaded", function () {
         calculate(["a","b","c"], "discriminantResult", (A,B,C)=>`Discriminant = ${B*B-4*A*C}`);
 
 });
+//complete
